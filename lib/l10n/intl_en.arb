@@ -1,1 +1,7 @@
-{}
+{
+  "vagas": "Vagas",
+  "historico": "Histórico",
+  "meuEstacionamento": "Meu Estacionamento",
+  "disponvel": "Disponível",
+  "ocupada": "Ocupada"
+}

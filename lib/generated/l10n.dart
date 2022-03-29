@@ -26,7 +26,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -46,6 +48,56 @@ class S {
 
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
+  }
+
+  /// `Vagas`
+  String get vagas {
+    return Intl.message(
+      'Vagas',
+      name: 'vagas',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Histórico`
+  String get historico {
+    return Intl.message(
+      'Histórico',
+      name: 'historico',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meu Estacionamento`
+  String get meuEstacionamento {
+    return Intl.message(
+      'Meu Estacionamento',
+      name: 'meuEstacionamento',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Disponível`
+  String get disponvel {
+    return Intl.message(
+      'Disponível',
+      name: 'disponvel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ocupada`
+  String get ocupada {
+    return Intl.message(
+      'Ocupada',
+      name: 'ocupada',
+      desc: '',
+      args: [],
+    );
   }
 }
 

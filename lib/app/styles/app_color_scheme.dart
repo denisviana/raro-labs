@@ -6,91 +6,95 @@ import 'app_theme_data.dart';
 class AppColorScheme {
   static final ColorScheme colorSchemeLight = ColorScheme.fromSwatch(
     brightness: Brightness.light,
-    backgroundColor: RadioLifeLightThemeColors.background,
-    accentColor: RadioLifeLightThemeColors.accentColor,
-    primarySwatch: RadioLifeLightThemeColors.primarySwatch,
-    cardColor: RadioLifeLightThemeColors.backgroundLight,
+    backgroundColor: AppLightThemeColors.background,
+    accentColor: AppLightThemeColors.accentColor,
+    primarySwatch: AppLightThemeColors.primarySwatch,
+    cardColor: AppLightThemeColors.backgroundLight,
     errorColor: error,
   );
 
   static final ColorScheme colorSchemeDark = ColorScheme.fromSwatch(
     brightness: Brightness.dark,
-    backgroundColor: RadioLifeDarkThemeColors.background,
-    accentColor: RadioLifeDarkThemeColors.accentColor,
-    primarySwatch: RadioLifeDarkThemeColors.primarySwatch,
-    cardColor: RadioLifeDarkThemeColors.backgroundLight,
+    backgroundColor: AppDarkThemeColors.background,
+    accentColor: AppDarkThemeColors.accentColor,
+    primarySwatch: AppDarkThemeColors.primarySwatch,
+    cardColor: AppDarkThemeColors.backgroundLight,
     errorColor: error,
   );
 
   static const white = Colors.white;
 
-  static MaterialColor get primarySwatchLight => RadioLifeLightThemeColors.primarySwatch;
-  static MaterialColor get primarySwatchDark => RadioLifeDarkThemeColors.primarySwatch;
+  static MaterialColor get primarySwatchLight => AppLightThemeColors.primarySwatch;
+  static MaterialColor get primarySwatchDark => AppDarkThemeColors.primarySwatch;
 
-  static MaterialColor get accentColorLight => RadioLifeLightThemeColors.accentColor;
-  static MaterialColor get accentColorDark => RadioLifeDarkThemeColors.accentColor;
+  static MaterialColor get accentColorLight => AppLightThemeColors.accentColor;
+  static MaterialColor get accentColorDark => AppDarkThemeColors.accentColor;
 
   static Color get background => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.background
-      : RadioLifeLightThemeColors.background;
+      ? AppDarkThemeColors.background
+      : AppLightThemeColors.background;
 
   static Color get backgroundLight => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.backgroundLight
-      : RadioLifeLightThemeColors.backgroundLight;
+      ? AppDarkThemeColors.backgroundLight
+      : AppLightThemeColors.backgroundLight;
 
   static Color get border => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.border
-      : RadioLifeLightThemeColors.border;
+      ? AppDarkThemeColors.border
+      : AppLightThemeColors.border;
 
   static Color get emphasis => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.emphasis
-      : RadioLifeLightThemeColors.emphasis;
+      ? AppDarkThemeColors.emphasis
+      : AppLightThemeColors.emphasis;
 
   static Color get emphasisLight => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.emphasisLight
-      : RadioLifeLightThemeColors.emphasisLight;
+      ? AppDarkThemeColors.emphasisLight
+      : AppLightThemeColors.emphasisLight;
 
   static Color get primary => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.primary
-      : RadioLifeLightThemeColors.primary;
+      ? AppDarkThemeColors.primary
+      : AppLightThemeColors.primary;
 
   static Color get primaryLight => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.primaryLight
-      : RadioLifeLightThemeColors.primaryLight;
+      ? AppDarkThemeColors.primaryLight
+      : AppLightThemeColors.primaryLight;
+
+  static Color get bodyText => AppThemeData.appThemeModeIsDark
+      ? AppDarkThemeColors.bodyText
+      : AppLightThemeColors.bodyText;
 
   static Color get shadow => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.shadow
-      : RadioLifeLightThemeColors.shadow;
+      ? AppDarkThemeColors.shadow
+      : AppLightThemeColors.shadow;
 
   static Color get success => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.success
-      : RadioLifeLightThemeColors.success;
+      ? AppDarkThemeColors.success
+      : AppLightThemeColors.success;
 
   static Color get successLight => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.successLight
-      : RadioLifeLightThemeColors.successLight;
+      ? AppDarkThemeColors.successLight
+      : AppLightThemeColors.successLight;
 
   static Color get error => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.error
-      : RadioLifeLightThemeColors.error;
+      ? AppDarkThemeColors.error
+      : AppLightThemeColors.error;
 
   static Color get errorLight => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.errorLight
-      : RadioLifeLightThemeColors.errorLight;
+      ? AppDarkThemeColors.errorLight
+      : AppLightThemeColors.errorLight;
 
   static Color get shimmerBaseColor => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.shimmerBaseColor
-      : RadioLifeLightThemeColors.shimmerBaseColor;
+      ? AppDarkThemeColors.shimmerBaseColor
+      : AppLightThemeColors.shimmerBaseColor;
 
   static Color get shimmerHighlightColor => AppThemeData.appThemeModeIsDark
-      ? RadioLifeDarkThemeColors.shimmerHighlightColor
-      : RadioLifeLightThemeColors.shimmerHighlightColor;
+      ? AppDarkThemeColors.shimmerHighlightColor
+      : AppLightThemeColors.shimmerHighlightColor;
 
   static const lightGray = Color(0xffe4e4e4);
   static const darkPurple = Color(0xFF090B27);
 }
 
-class RadioLifeDarkThemeColors {
+class AppDarkThemeColors {
   static final MaterialColor primarySwatch = StyleUtils.createMaterialColor(primary);
   static final MaterialColor accentColor = StyleUtils.createMaterialColor(emphasis);
 
@@ -100,6 +104,7 @@ class RadioLifeDarkThemeColors {
   static const emphasis = Color(0xFFFFFFFF);
   static const emphasisLight = Color(0x66FFFFFF);
   static const primary = Color(0xFF1E1E48);
+  static const bodyText = Color(0xFFFFFFFF);
   static const primaryLight = Color(0xFF7469D9);
   static const shadow = Color(0x26000000);
   static const success = Color(0xFF74DBB5);
@@ -110,11 +115,12 @@ class RadioLifeDarkThemeColors {
   static const shimmerHighlightColor = Color(0xFF292954);
 }
 
-class RadioLifeLightThemeColors {
+class AppLightThemeColors {
   static final MaterialColor primarySwatch = StyleUtils.createMaterialColor(primary);
   static final MaterialColor accentColor = StyleUtils.createMaterialColor(emphasis);
 
   static const background = Color(0xFFFBF6EF);
+  static const bodyText = Color(0xFF000000);
   static const backgroundLight = Color(0xFFFBF6EF);
   static const border = Color(0x33232A65);
   static const emphasis = Color(0xFF232A65);

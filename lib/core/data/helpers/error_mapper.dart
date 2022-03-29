@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 
-import '../model/app_exception.dart';
+import '../../resource/app_exception.dart';
 
 class ErrorMapper {
   static AppException from(dynamic e) => e is DioError

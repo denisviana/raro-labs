@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'app/app_widget.dart';
 import 'app/styles/app_color_scheme.dart';
 import 'core/data/helpers/error_mapper.dart';
-import 'core/data/model/resource.dart';
+import 'core/resource/resource.dart';
 import 'flavors/environment.dart';
 import 'flavors/flavor_values.dart';
 

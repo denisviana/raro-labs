@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/app/styles/theme_data_radio_life.dart';
+import 'package:flutter/services.dart';
+import 'package:my_app/app/styles/theme_data.dart';
 
 import 'app_color_scheme.dart';
 import 'app_font_size.dart';
@@ -21,6 +22,7 @@ class AppThemeData extends ThemeDataMyApp {
   static bool get appThemeModeIsDark => _appThemeModeIsDark ?? ThemeDataMyApp.isDark ?? true;
 
   static ThemeData get themeData => appThemeModeIsDark ? themeDataDark : themeDataLight;
+
   static ThemeMode get themeMode => ThemeDataMyApp.isDark == null
       ? ThemeMode.system
       : appThemeModeIsDark
@@ -33,28 +35,33 @@ class AppThemeData extends ThemeDataMyApp {
     primarySwatch: AppColorScheme.primarySwatchLight,
     textTheme: AppTextTheme.textTheme,
     bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.transparent),
-    tabBarTheme: const TabBarTheme(
+    tabBarTheme: TabBarTheme(
+      labelColor: AppColorScheme.emphasis,
       labelStyle: TextStyle(
           fontSize: AppFontSize.primary,
+          color: AppColorScheme.emphasis,
           fontWeight: AppFontWeight.semiBold,
           fontFamily: 'Montserrat'),
       unselectedLabelStyle: TextStyle(
           fontSize: AppFontSize.primary,
+          color: AppColorScheme.emphasisLight,
           fontWeight: AppFontWeight.semiBold,
           fontFamily: 'Montserrat'),
-      labelPadding: EdgeInsets.symmetric(horizontal: AppSpacing.extraSmall),
+      labelPadding: const EdgeInsets.symmetric(horizontal: 12),
     ),
-    scaffoldBackgroundColor: RadioLifeLightThemeColors.background,
+    scaffoldBackgroundColor: AppLightThemeColors.background,
     colorScheme: AppColorScheme.colorSchemeLight,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     textSelectionTheme: TextSelectionThemeData(
-      selectionColor: AppColorScheme.successLight,
-      cursorColor: AppColorScheme.success,
-      selectionHandleColor: AppColorScheme.success,
+      selectionColor: AppColorScheme.primary,
+      cursorColor: AppColorScheme.primary,
+      selectionHandleColor: AppColorScheme.primary,
     ),
-    appBarTheme:
-        const AppBarTheme(backgroundColor: RadioLifeLightThemeColors.background, elevation: 0),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: AppLightThemeColors.background,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        elevation: 0),
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {
         TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
@@ -62,12 +69,25 @@ class AppThemeData extends ThemeDataMyApp {
         TargetPlatform.fuchsia: ZoomPageTransitionsBuilder(),
       },
     ),
-    cupertinoOverrideTheme: const CupertinoThemeData(
+    cupertinoOverrideTheme: CupertinoThemeData(
       brightness: Brightness.light,
+      textTheme: CupertinoTextThemeData(
+        dateTimePickerTextStyle: TextStyle(
+          color: AppColorScheme.bodyText,
+          fontSize: AppFontSize.extraLarge,
+          fontFamily: 'Montserrat',
+        ),
+        pickerTextStyle: TextStyle(
+          color: AppColorScheme.bodyText,
+          fontSize: AppFontSize.extraLarge,
+          fontFamily: 'Montserrat',
+        ),
+      ),
     ),
     iconTheme: IconThemeData(
-      color: AppColorScheme.primarySwatchLight[500],
+      color: AppColorScheme.bodyText,
     ),
+    disabledColor: AppColorScheme.border,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: true,
@@ -75,6 +95,7 @@ class AppThemeData extends ThemeDataMyApp {
     ),
     buttonTheme: ButtonThemeData(
         colorScheme: AppColorScheme.colorSchemeLight, textTheme: ButtonTextTheme.primary),
+    unselectedWidgetColor: AppColorScheme.bodyText,
   );
 
   static final ThemeData themeDataDark = ThemeData(
@@ -92,20 +113,21 @@ class AppThemeData extends ThemeDataMyApp {
           fontSize: AppFontSize.primary,
           fontWeight: AppFontWeight.semiBold,
           fontFamily: 'Montserrat'),
-      labelPadding: EdgeInsets.symmetric(horizontal: AppSpacing.extraSmall),
+      labelPadding: EdgeInsets.symmetric(horizontal: 12),
     ),
     textTheme: AppTextTheme.textTheme,
     bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.transparent),
-    scaffoldBackgroundColor: RadioLifeDarkThemeColors.background,
+    scaffoldBackgroundColor: AppDarkThemeColors.background,
     colorScheme: AppColorScheme.colorSchemeDark,
     textSelectionTheme: TextSelectionThemeData(
-      selectionColor: AppColorScheme.successLight,
-      cursorColor: AppColorScheme.success,
-      selectionHandleColor: AppColorScheme.success,
+      selectionColor: AppColorScheme.primary,
+      cursorColor: AppColorScheme.primary,
+      selectionHandleColor: AppColorScheme.primary,
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: RadioLifeDarkThemeColors.background,
+      backgroundColor: AppDarkThemeColors.background,
       elevation: 0,
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
     ),
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {
@@ -114,17 +136,27 @@ class AppThemeData extends ThemeDataMyApp {
         TargetPlatform.fuchsia: ZoomPageTransitionsBuilder(),
       },
     ),
+    cupertinoOverrideTheme: CupertinoThemeData(
+      brightness: Brightness.dark,
+      textTheme: CupertinoTextThemeData(
+        dateTimePickerTextStyle: TextStyle(
+          color: AppColorScheme.bodyText,
+          fontSize: AppFontSize.extraLarge,
+          fontFamily: 'Montserrat',
+        ),
+        pickerTextStyle: TextStyle(
+          color: AppColorScheme.bodyText,
+          fontSize: AppFontSize.extraLarge,
+          fontFamily: 'Montserrat',
+        ),
+      ),
+    ),
     iconTheme: IconThemeData(
-      color: AppColorScheme.primarySwatchDark[500],
+      color: AppColorScheme.bodyText,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: RadioLifeDarkThemeColors.backgroundLight,
-      type: BottomNavigationBarType.fixed,
-      selectedItemColor: RadioLifeDarkThemeColors.emphasis,
-      unselectedItemColor: RadioLifeDarkThemeColors.emphasis.withOpacity(0.3),
-      elevation: 0,
-    ),
+    disabledColor: AppColorScheme.border,
     buttonTheme: ButtonThemeData(
         colorScheme: AppColorScheme.colorSchemeDark, textTheme: ButtonTextTheme.primary),
+    unselectedWidgetColor: AppColorScheme.bodyText,
   );
 }

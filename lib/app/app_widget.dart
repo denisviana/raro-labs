@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:my_app/app/styles/theme_data_radio_life.dart';
+import 'package:my_app/app/styles/theme_data.dart';
 
 import '../generated/l10n.dart';
 import 'app_binding.dart';
@@ -34,10 +34,10 @@ class AppWidget extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'My App',
         themeMode: AppThemeData.themeMode,
-        theme: AppThemeData.themeData,
+        theme: AppThemeData.themeDataLight,
         darkTheme: AppThemeData.themeDataDark,
         getPages: AppRoutes.routes,
-        initialRoute: Routes.initial,
+        initialRoute: Routes.main,
         initialBinding: AppBinding(),
       );
 }
