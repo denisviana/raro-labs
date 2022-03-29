@@ -1,5 +1,3 @@
-import 'package:equatable/equatable.dart';
-
 import '../../../resource/resource.dart';
 
 abstract class BaseFutureResourceUseCase<Param, Result> extends BaseUseCase {

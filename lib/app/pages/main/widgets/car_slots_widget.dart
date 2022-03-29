@@ -34,9 +34,9 @@ class CarSlotsWidget extends GetView<MainController> {
             ),
             color: AppColorScheme.white,
             child: InkWell(
-              onTap: slots[index].available
-                  ? controller.setSlotAsNotAvailable
-                  : controller.setSlotAsAvailable,
+              onTap: () => slots[index].available
+                  ? controller.setSlotAsNotAvailable(slots[index].slotNumber)
+                  : controller.setSlotAsAvailable(slots[index].slotNumber),
               splashColor: AppColorScheme.emphasisLight.withOpacity(0.1),
               child: Container(
                 padding: const EdgeInsets.all(10),

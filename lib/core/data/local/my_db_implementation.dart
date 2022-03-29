@@ -37,7 +37,7 @@ class MyDbImplementation extends MyDb {
   @override
   Future<List<SlotEntity>> setSlotAsNotAvailable({required SlotEntity slotEntity}) {
     final newList =
-        _slots.map((slot) => slot.slotNumber == slotEntity.slotNumber ? slotEntity : slot);
+        _slots.map((slot) => slot.slotNumber == slotEntity.slotNumber ? slotEntity : slot).toList();
     _slots.clear();
     _slots.addAll(newList);
     _history.add(
@@ -64,8 +64,11 @@ class MyDbImplementation extends MyDb {
         eventType: EventType.available,
       ),
     );
-    final newList = _slots.map((slot) =>
-        slot.slotNumber == slotNumber ? SlotEntity(slotNumber: slotNumber, available: true) : slot);
+    final newList = _slots
+        .map((slot) => slot.slotNumber == slotNumber
+            ? SlotEntity(slotNumber: slotNumber, available: true)
+            : slot)
+        .toList();
     _slots.clear();
     _slots.addAll(newList);
     return Future.value(_slots);

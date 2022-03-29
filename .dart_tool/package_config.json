@@ -368,6 +368,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mask_text_input_formatter",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/mask_text_input_formatter-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11",
       "packageUri": "lib/",
@@ -710,7 +716,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-03-27T15:00:43.554155Z",
+  "generated": "2022-03-29T14:42:17.207973Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
