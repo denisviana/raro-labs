@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:my_app/core/domain/entity/history/history_entity.dart';
 import 'package:my_app/core/domain/entity/slot/slot_entity.dart';
 

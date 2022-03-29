@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:my_app/core/data/interceptors/app_interceptor.dart';
+import 'package:my_app/core/data/local/my_db.dart';
+import 'package:my_app/core/data/local/my_db_implementation.dart';
 import 'package:my_app/core/data/network/dio_client.dart';
 import 'package:my_app/flavors/flavor_values.dart';
 
@@ -25,6 +27,9 @@ abstract class RemoteModule {
     ));
     return dio;
   }
+
+  @singleton
+  MyDb provideMyDb() => MyDbImplementation();
 
   @singleton
   InterceptorsWrapper provideInterceptor(

@@ -1,9 +1,11 @@
+import 'package:injectable/injectable.dart';
 import 'package:my_app/core/data/local/my_db.dart';
 import 'package:my_app/core/domain/entity/history/history_entity.dart';
 import 'package:my_app/core/domain/entity/slot/slot_entity.dart';
 import 'package:my_app/core/domain/repositories/main_repository.dart';
 import 'package:my_app/core/resource/resource.dart';
 
+@Injectable(as: MainRepository)
 class MainRepositoryImplementation implements MainRepository {
   final MyDb _db;
 

@@ -134,6 +134,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "coverage",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/coverage-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
       "packageUri": "lib/",
@@ -398,6 +404,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mocktail",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/mocktail-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "node_preamble",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/node_preamble-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "oauth_dio",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/oauth_dio-0.2.7",
       "packageUri": "lib/",
@@ -584,6 +602,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "shelf_packages_handler",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/shelf_packages_handler-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shelf_static",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/shelf_static-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "shelf_web_socket",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/shelf_web_socket-1.0.1",
       "packageUri": "lib/",
@@ -604,6 +634,18 @@
     {
       "name": "source_gen",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/source_gen-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "source_map_stack_trace",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/source_map_stack_trace-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "source_maps",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/source_maps-0.10.10",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -644,10 +686,22 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "test",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/test-1.19.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "test_api",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "test_core",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/test_core-0.4.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "timing",
@@ -674,6 +728,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "vm_service",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/vm_service-7.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "watcher",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/watcher-1.0.1",
       "packageUri": "lib/",
@@ -682,6 +742,12 @@
     {
       "name": "web_socket_channel",
       "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "webkit_inspection_protocol",
+      "rootUri": "file:///Users/denisviana/.pub-cache/hosted/pub.dartlang.org/webkit_inspection_protocol-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -716,7 +782,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-03-29T14:42:17.207973Z",
+  "generated": "2022-03-29T16:26:44.200559Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
