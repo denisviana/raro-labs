@@ -6,7 +6,6 @@ import 'package:my_app/app/styles/theme_data.dart';
 import 'app_color_scheme.dart';
 import 'app_font_size.dart';
 import 'app_font_weight.dart';
-import 'app_spacing.dart';
 import 'app_text_theme.dart';
 
 /// https://medium.com/flutter-community/page-transitions-using-themedata-in-flutter-c24afadb0b5d

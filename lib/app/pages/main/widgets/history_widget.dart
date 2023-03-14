@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app/pages/main/view_model/history_model.dart';
-import 'package:my_app/app/styles/app_font_weight.dart';
 import 'package:my_app/app/styles/app_theme.dart';
 
 class HistoryWidget extends StatelessWidget {

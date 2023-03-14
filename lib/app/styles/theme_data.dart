@@ -4,9 +4,8 @@ class ThemeDataMyApp {
   static bool? _isDark;
 
   static void setIsDark(theme_data_my_app.BuildContext context) {
-    _isDark = theme_data_my_app.MediaQuery.of(context).platformBrightness ==
-        theme_data_my_app.Brightness.dark;
+    _isDark = false;
   }
 
-  static bool? get isDark => false;
+  static bool? get isDark => _isDark;
 }
